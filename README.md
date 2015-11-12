@@ -18,19 +18,19 @@ It doesn't depend on jQuery or other frameworks, though.
 
 Add the following to your `Gemfile`:
 
-  gem "rome-rails"
+    gem "rome-rails"
 
 
-### Bundled version (includes `moment`)
+#### Bundled version (includes `moment`)
 
 Rome rails includes a bundled version of `moment.js`.
 
 Add the following directive to your Javascript manifest file (`application.js`):
 
-  //= require rome
+    //= require rome
 
 
-### Standalone version (uses existing `moment`)
+#### Standalone version (uses existing `moment`)
 
 If you're already using `moment`,
 (perhaps with the
@@ -40,20 +40,20 @@ you can included a standalone version of Rome.
 Just make sure you require `moment` **before** `rome-standalone`
 in your Javascript manifest file (`application.js`).
 
-  //= require moment
-  //= require rome.standalone
+    //= require moment
+    //= require rome.standalone
 
 
-### Stylesheets
+#### Stylesheets
 
 Add the following directive to your Stylesheets manifest file (`application.css`):
 
-  //= require rome
+    //= require rome
 
 If you're using `sass-rails`, and your manifest file is `application.**scss**`,
 then [you should use Sass's style `@import` functions](https://github.com/rails/sass-rails#important-note)
 
-  @import "rome";
+    @import "rome";
 
 
 ## Versioning
