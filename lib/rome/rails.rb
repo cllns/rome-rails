@@ -2,6 +2,7 @@ require "rome/rails/version"
 
 module Rome
   module Rails
-    # Your code goes here...
+    class Engine < ::Rails::Engine
+    end
   end
 end

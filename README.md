@@ -1,41 +1,82 @@
-# Rome::Rails
+# rome-rails
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rome/rails`. To experiment with that code, run `bin/console` for an interactive prompt.
+rome-rails wraps the
+[Rome](https://bevacqua.github.io/rome/)
+([GitHub](https://github.com/bevacqua/rome)]
+javascript library for use in a Ruby on Rails project.
 
-TODO: Delete this and the text above, and describe your gem
+Rome is a customizable date (and time) picker.
 
-## Installation
+Rome depends on [`moment`](http://momentjs.com/),
+which is bundled by default.
+If you're already using `moment`,
+you can use a version of Rome that doesn't bundle `moment`.
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'rome-rails'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install rome-rails
+It doesn't depend on jQuery or other frameworks, though.
 
 ## Usage
 
-TODO: Write usage instructions here
+Add the following to your `Gemfile`:
+
+  gem "rome-rails"
+
+
+### Bundled version (includes `moment`)
+
+Rome rails includes a bundled version of `moment.js`.
+
+Add the following directive to your Javascript manifest file (`application.js`):
+
+  //= require rome
+
+
+### Standalone version (uses existing `moment`)
+
+If you're already using `moment`,
+(perhaps with the
+[`momentjs-rails` gem](https://github.com/derekprior/momentjs-rails)?)
+you can included a standalone version of Rome.
+
+Just make sure you require `moment` **before** `rome-standalone`
+in your Javascript manifest file (`application.js`).
+
+  //= require moment
+  //= require rome.standalone
+
+
+### Stylesheets
+
+Add the following directive to your Stylesheets manifest file (`application.css`):
+
+  //= require rome
+
+If you're using `sass-rails`, and your manifest file is `application.**scss**`,
+then [you should use Sass's style `@import` functions](https://github.com/rails/sass-rails#important-note)
+
+  @import "rome";
+
+
+## Versioning
+
+The version of this gem will match the version of the underlying
+[Rome](https://github.com/bevacqua/rome) library.
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+After checking out the repo, run `bundle` to install dependencies.
+Then, run `rake spec` to run the tests.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rome-rails. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports, pull requests, support queries are welcome
+on GitHub at https://github.com/cllns/rome-rails.
+This project actively pursues maintaining a safe,
+welcoming space for collaboration,
+and contributors are expected to adhere to the
+[Contributor Covenant](contributor-covenant.org) code of conduct.
 
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
+The gem is available as open source under the terms of the
+[MIT License](http://opensource.org/licenses/MIT).
