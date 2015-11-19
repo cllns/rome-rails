@@ -54,7 +54,15 @@ If you're using `sass-rails`, and your manifest file is `application.**scss**`,
 then [you should use Sass's style `@import` functions](https://github.com/rails/sass-rails#important-note)
 
     @import "rome";
+    
+### Creating a calendar
 
+Once you have the files required, 
+write some javascript (likely in a new file) to create a calendar.
+
+Follow [the examples from the `rome` homepage](http://bevacqua.github.io/rome/). 
+
+Remember: `rome` doesn't require jQuery, so it takes a native DOM element, not a jQuery element.
 
 ## Versioning
 
