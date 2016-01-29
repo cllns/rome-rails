@@ -2,7 +2,7 @@
 
 rome-rails wraps the
 [Rome](https://bevacqua.github.io/rome/)
-([GitHub](https://github.com/bevacqua/rome)]
+([GitHub](https://github.com/bevacqua/rome))
 javascript library for use in a Ruby on Rails project.
 
 Rome is a customizable date (and time) picker.
